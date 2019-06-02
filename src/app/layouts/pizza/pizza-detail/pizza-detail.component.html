@@ -1,0 +1,58 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="pizza-image">
+        <div class="view hm-zoom z-depth-2" style="cursor: pointer">
+          <img [src]="pizza.pizzaImageUrl" [alt]="pizza.pizzaName" width="100%" class="img-fluid rounded">
+        </div>
+        <div class="" style="margin-top:15px">
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">pizza Price</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">₹ {{pizza.pizzaPrice}}</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">pizza Seller</h6>
+              </div>
+              <span class="text-muted" style="color:crimson !important">{{pizza.pizzaSeller}}</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" (click)="addToCart(pizza)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <div class="pizza-detail">
+        <h5 class="pizza-head">pizza Details</h5>
+        <table class="table" cellspacing="0" style="max-height: 28px">
+          <tbody>
+            <tr>
+              <th scope="row">pizza Name</th>
+              <td>{{pizza.pizzaName}}</td>
+            </tr>
+            <tr>
+              <th scope="row">pizza Description</th>
+              <td>{{pizza.pizzaDescription}}</td>
+            </tr>
+            <tr>
+              <th scope="row">pizza Category</th>
+              <td>{{pizza.pizzaCategory}}</td>
+            </tr>
+            <tr>
+              <th scope="row">No. of quantity available</th>
+              <td>{{pizza.pizzaQuatity}}</td>
+            </tr>
+            <tr>
+              <th scope="row">pizza Added on</th>
+              <td>{{pizza.pizzaAdded * 1000 | date}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

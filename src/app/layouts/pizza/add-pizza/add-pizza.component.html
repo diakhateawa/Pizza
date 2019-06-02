@@ -1,0 +1,77 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add pizza</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" #addpizzaForm="ngForm" (ngSubmit)="createpizza(addpizzaForm)">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="pizzaName">pizza Name</label>
+              <input type="text" class="form-control" id="pizzaName" name="pizzaName" [(ngModel)]="pizza.pizzaName" placeholder="pizza Name"
+                value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="pizzaCategory">pizza Category</label>
+              <input type="text" class="form-control" id="pizzaCategory" name="pizzaCategory" [(ngModel)]="pizza.pizzaCategory"
+                placeholder="pizza Category" value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="pizzaDescription">pizza Description
+              <span class="text-muted">(Optional)</span>
+            </label>
+            <textarea type="text" class="form-control" id="pizzaDescription" placeholder="pizza Description" name="pizzaDescription"
+              [(ngModel)]="pizza.pizzaDescription"></textarea>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="pizzaPrice">pizza Price</label>
+              <input type="number" name="pizzaPrice" class="form-control" [(ngModel)]="pizza.pizzaPrice" placeholder="pizza Price"
+                id="pizzaPrice" value="" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="pizzaQuatity">pizza Quantity</label>
+              <input type="text" class="form-control" id="pizzaQuatity" name="pizzaQuatity" [(ngModel)]="pizza.pizzaQuatity" placeholder="pizza Quantity"
+                value="" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="pizzaSeller">pizza Seller</label>
+            <input type="text" class="form-control" id="pizzaSeller" [(ngModel)]="pizza.pizzaSeller" name="pizzaSeller" placeholder="pizza Seller"
+              required>
+          </div>
+          <div class="mb-3">
+            <label for="pizzaImageUrl">pizza Image</label>
+            <input type="text" class="form-control" id="pizzaImageUrl" [(ngModel)]="pizza.pizzaImageUrl" name="pizzaImageUrl"
+              placeholder="Image Url" required>
+          </div>
+
+          <hr class="mb-4">
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Add pizza</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
